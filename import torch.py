@@ -13,4 +13,19 @@ class Boleto_Espectaculo:
 		self._total = total
 		self._selloDigital = selloDigital
 
+
+	def generar_boleto(self, datosDelComprador, datosDelEvento, datosDeAsientos, precio, isep, total):
+		self._datosDelComprador = datosDelComprador
+		self._datosDelEvento = datosDelEvento
+		self._datosDeAsientos = datosDeAsientos
+		self._precio = precio
+		self._isep = isep
+		self._total = total
+
+	def Ver_documento(self):
+        print("Ver documento")    
+        resultado = self.Modifica_Comprador("Esperanza")
+        print(self._comprador)
+        print(resultado)
+
 	
