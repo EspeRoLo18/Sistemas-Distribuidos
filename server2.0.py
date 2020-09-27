@@ -1,7 +1,8 @@
-import Pyro5.api
 
+import Pyro5
+import Pyro5.core
 
-
+@Pyro5.server.expose
 class Boleto_Espectaculo:
     """docstring for Boleto_Espectaculo"""
     espectaculo = {
@@ -113,4 +114,10 @@ class Boleto_Espectaculo:
 
 
 
-    
+print('Iniciando servidor...')
+Pyro5.server.serve(
+		{
+			Boleto_Espectaculo: "servidor2.0"
+		},
+		use_ns=False, verbose=True, host="locahost" 
+	)

@@ -18,3 +18,13 @@ try:
     print(x)
 except Exception as e:
     print(e)
+
+
+
+
+from Boleto_Espectaculo import Boleto_Espectaculo
+
+data = Boleto_Espectaculo()
+
+
+data.Genera_boleto("","","","")
